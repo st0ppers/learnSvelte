@@ -1,34 +1,5 @@
 <script>
-    import ContentCard from "./ContentCard.svelte";
-    
-    let name = 'world';
-    let count = 0;
-    let title = 'My title';
-    let jobTitle = 'Software Engineer';
-    $: uppercaseName = name.toUpperCase(); 
-    
-    $: {
-        console.log(`Hello ${name}!`);
-    }
-    
-    function handleInput(event) {
-        name = event.target.value;
-    }
+    import Header from "./UI/Header.svelte"
+
 </script>
-
-<p>Regular js {count}</p>
-<p>Uppercase name {uppercaseName}</p>
-
-<button on:click={() => count +=1}>Clicked {count} times</button> 
-
-<input bind:value={name} type="text" />
-<input bind:value={title} type="text" />
-<input bind:value={jobTitle} type="text" />
-<!--<input on:input={handleInput} type="text">-->
-
-<ContentCard
-userName={name}
-{title}
-discription={jobTitle}
-/>
-
+<Header/>    import Header from "./UI/Header.svelte"
